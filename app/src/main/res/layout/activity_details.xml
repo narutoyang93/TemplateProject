@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".example.activity.DetailsActivity">
+
+        <com.naruto.templateproject.common.view.MyScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_275"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/bg_splash1"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/paddingHorizontal"
+                    android:paddingVertical="@dimen/dp_10"
+                    android:text="@string/large_text" />
+            </LinearLayout>
+        </com.naruto.templateproject.common.view.MyScrollView>
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/title_bar_detail" />
+    </FrameLayout>
+</layout>

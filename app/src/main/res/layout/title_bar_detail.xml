@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/v_bg_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/fl_titleBar"
+            android:layout_alignParentTop="true"
+            android:alpha="0"
+            android:background="@drawable/bg_bottom_line" />
+
+        <FrameLayout
+            android:id="@+id/fl_titleBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="@string/fits_system_windows_tag">
+
+            <LinearLayout
+                android:id="@+id/ll_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/dp_13">
+
+                <ImageView
+                    android:id="@+id/iv_titleBar_back"
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_marginVertical="@dimen/dp_9"
+                    android:background="@drawable/circle"
+                    android:backgroundTint="#40000000"
+                    android:padding="@dimen/dp_3"
+                    android:src="@drawable/ic_back"
+                    app:tint="@color/white_black" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/iv_share"
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/circle"
+                    android:backgroundTint="#40000000"
+                    android:padding="@dimen/dp_3"
+                    android:src="@drawable/ic_share"
+                    app:tint="@color/white_black" />
+
+
+                <ImageView
+                    android:id="@+id/iv_more_menu"
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:background="@drawable/circle"
+                    android:backgroundTint="#40000000"
+                    android:padding="@dimen/dp_3"
+                    android:src="@drawable/ic_more_menu"
+                    app:tint="@color/white_black" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_titleBar_title"
+                style="@style/TextStyle_titleBar"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dp_48"
+                android:layout_marginRight="@dimen/dp_48"
+                tools:text="标题" />
+        </FrameLayout>
+    </RelativeLayout>
+</layout>

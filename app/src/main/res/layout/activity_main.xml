@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:divider="@drawable/line_horizontal"
+    android:orientation="vertical"
+    android:showDividers="middle"
+    tools:context=".launch.activity.MainActivity">
+
+    <com.naruto.templateproject.common.view.FitSystemWindowFrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_tab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titleBarHeight"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/dp_20">
+
+        <com.naruto.templateproject.common.view.ZoomAnimationButton
+            android:id="@+id/btn_home"
+            style="@style/ZoomButtonStyle_main_bottom_bar"
+            app:drawable="@drawable/ic_home"
+            app:text="首页" />
+
+        <Space style="@style/PlaceholderViewStyle" />
+
+        <com.naruto.templateproject.common.view.ZoomAnimationButton
+            android:id="@+id/btn_message"
+            style="@style/ZoomButtonStyle_main_bottom_bar"
+            app:drawable="@drawable/ic_message"
+            app:text="消息" />
+
+        <Space style="@style/PlaceholderViewStyle" />
+
+        <com.naruto.templateproject.common.view.ZoomAnimationButton
+            android:id="@+id/btn_mine"
+            style="@style/ZoomButtonStyle_main_bottom_bar"
+            app:drawable="@drawable/ic_mine"
+            app:text="我的" />
+    </LinearLayout>
+
+</LinearLayout>
